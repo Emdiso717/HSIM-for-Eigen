@@ -95,7 +95,21 @@ int main()
     //     Vector3i(0, 1, 5),
     //     Vector3i(0, 5, 4)};
 
-    Construct_hierarchy(vertices, faces, 3, 5);
+    // build hierarchy
+    vector<vector<int>> Hierarchy;
+    Hierarchy = Construct_hierarchy(vertices, faces, 3, 5);
+    vector<SparseMatrix<double>> U;
+    U = Build_Prolongation(Hierarchy, vertices, faces, 7);
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     cout << i << ":" << endl;
+    //     for (int num : Hierarchy[i])
+    //     {
+    //         std::cout << num << " ";
+    //     }
+    //     cout << endl;
+    //     cout << Hierarchy[i].size() << endl;
+    // }
 
     // LaplaceBeltrami3D k(vertices, faces);
     // Eigen::SparseMatrix<double> stiffness;

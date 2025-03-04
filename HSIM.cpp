@@ -91,7 +91,10 @@ void computeDistances(
     }
 }
 
-std::vector<set<int>> Construct_hierarchy(std::vector<Eigen::Vector3d> vertices, std::vector<Eigen::Vector3i> faces, int T, int p)
+std::vector<vector<int>> Construct_hierarchy(
+    std::vector<Eigen::Vector3d> vertices,
+    std::vector<Eigen::Vector3i> faces,
+    int T, int p)
 {
     // Adjacency Matrix
     std::vector<std::set<std::pair<int, double>>> adjacency;
@@ -108,40 +111,41 @@ std::vector<set<int>> Construct_hierarchy(std::vector<Eigen::Vector3d> vertices,
         }
     }
     // Init
-    vector<set<int>> hierarchy;
+    vector<vector<int>> hierarchy;
     hierarchy.resize(T);
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, vertices.size() - 1);
     int start_v = dis(gen);
-    std::set<int> VT = {start_v};
-    // int n = max(1.5 * p, 1000);
-    int n = 2;
+    std::vector<int> VT = {start_v};
+    int n = max((int)(1.5 * p), 1000);
+    // int n = 2; //For Test
     double mu = pow(vertices.size() / n, 1.0 / T);
-    cout << mu << endl;
-    // distance vector
+    // cout << mu << endl;
+    //   distance vector
     std::vector<double>
         distances(adjacency.size(), std::numeric_limits<double>::infinity());
     computeDistances(adjacency, start_v, distances);
-    for (int i = 0; i < adjacency.size(); i++)
-    {
-        cout << "dist" << i << "=" << distances[i] << endl;
-    }
+    // for (int i = 0; i < adjacency.size(); i++)
+    // {
+    //     cout << "dist" << i << "=" << distances[i] << endl;
+    // }
+    // cout << "dist" << start_v << "=" << distances[start_v] << endl;
     for (int i = T - 1; i > 0; i--)
     {
-        std::set<int> V_current = VT;
+        std::vector<int> V_current = VT;
         for (int j = V_current.size(); j < n; j++)
         {
             // find max
             auto max_dist = max_element(distances.begin(), distances.end());
             int max_index = std::distance(distances.begin(), max_dist);
-            V_current.insert(max_index);
+            V_current.push_back(max_index);
             // update distances
             computeDistances(adjacency, max_index, distances);
-            for (int t = 0; t < adjacency.size(); t++)
-            {
-                cout << "dist" << t << "=" << distances[t] << endl;
-            }
+            // for (int t = 0; t < adjacency.size(); t++)
+            // {
+            //     cout << "dist" << t << "=" << distances[t] << endl;
+            // }
         }
         hierarchy[i] = V_current;
         VT = V_current;
@@ -149,16 +153,72 @@ std::vector<set<int>> Construct_hierarchy(std::vector<Eigen::Vector3d> vertices,
     }
     for (int i = 0; i < vertices.size(); i++)
     {
-        hierarchy[0].insert(i);
-    }
-    for (int i = 0; i < 3; i++)
-    {
-        cout << i << ":" << endl;
-        for (int num : hierarchy[i])
-        {
-            std::cout << num << " ";
-        }
-        cout << endl;
+        hierarchy[0].push_back(i);
     }
     return hierarchy;
+}
+
+std::vector<SparseMatrix<double>> Build_Prolongation(
+    vector<vector<int>> Hierarchy,
+    std::vector<Eigen::Vector3d> vertices,
+    std::vector<Eigen::Vector3i> faces,
+    double sigma)
+{
+    double A = 0;
+
+    vector<SparseMatrix<double>> result;
+    result.resize(Hierarchy.size());
+    // area of the surface
+    for (int i = 0; i < faces.size(); i++)
+    {
+        Eigen::Vector3d v1 = vertices[faces[i](0)];
+        Eigen::Vector3d v2 = vertices[faces[i](1)];
+        Eigen::Vector3d v3 = vertices[faces[i](2)];
+        Eigen::Vector3d e1 = v2 - v1;
+        Eigen::Vector3d e2 = v3 - v2;
+        Eigen::Vector3d e3 = v1 - v3;
+        double area = 0.5 * (e1.cross(-e3)).norm();
+        A += area;
+    }
+    cout << A << endl;
+    // For all level
+    for (int i = Hierarchy.size() - 1; i > 0; i--)
+    {
+        double rho = sqrt((sigma * A) / Hierarchy[i].size() * M_PI);
+        cout << rho << endl;
+        SparseMatrix<double> U;
+        U.resize(Hierarchy[i - 1].size(), Hierarchy[i].size());
+        vector<Triplet<double>> tripletList;
+        // Normalization
+        vector<double> rowsum;
+        rowsum.resize(Hierarchy[i - 1].size());
+        // Each row
+        for (int j = 0; j < Hierarchy[i - 1].size(); j++)
+        {
+            // Each col
+            rowsum[j] = 0;
+            for (int k = 0; k < Hierarchy[i].size(); k++)
+            {
+                Eigen::Vector3d vi = vertices[Hierarchy[i - 1][j]];
+                Eigen::Vector3d vj = vertices[Hierarchy[i][k]];
+                double dist = (vi - vj).norm();
+                if (dist <= rho)
+                {
+                    double temp_u = 1 - dist / rho;
+                    rowsum[j] += temp_u;
+                    tripletList.push_back(Eigen::Triplet<double>(j, k, temp_u));
+                }
+            }
+        }
+        for (auto &iter : tripletList)
+        {
+            int row = iter.row();
+            int col = iter.col();
+            double value = iter.value();
+            iter = Triplet<double>(row, col, value / rowsum[row]);
+        }
+        U.setFromTriplets(tripletList.begin(), tripletList.end());
+        result[i - 1] = U;
+    }
+    return result;
 }

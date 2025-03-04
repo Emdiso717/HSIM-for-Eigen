@@ -4,6 +4,7 @@
 #include <set>
 #include <queue>
 #include <random>
+#include <cmath>
 using namespace Eigen;
 using namespace std;
 
@@ -18,4 +19,10 @@ void computeDistances(
     const std::vector<std::set<std::pair<int, double>>> &adjacency,
     int source,
     std::vector<double> &distances);
-std::vector<set<int>> Construct_hierarchy(std::vector<Eigen::Vector3d> vertices, std::vector<Eigen::Vector3i> faces, int T, int p);
+std::vector<vector<int>> Construct_hierarchy(std::vector<Eigen::Vector3d> vertices, std::vector<Eigen::Vector3i> faces, int T, int p);
+
+std::vector<SparseMatrix<double>> Build_Prolongation(
+    vector<vector<int>> Hierarchy,
+    std::vector<Eigen::Vector3d> vertices,
+    std::vector<Eigen::Vector3i> faces,
+    double sigma);
