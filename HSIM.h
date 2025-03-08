@@ -26,3 +26,11 @@ std::vector<SparseMatrix<double>> Build_Prolongation(
     std::vector<Eigen::Vector3d> vertices,
     std::vector<Eigen::Vector3i> faces,
     double sigma);
+
+std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
+    const SparseMatrix<double> &S,
+    const SparseMatrix<double> &M,
+    int p,
+    int T,
+    double epsilon,
+    std::vector<SparseMatrix<double>> U);

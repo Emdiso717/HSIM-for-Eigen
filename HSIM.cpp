@@ -31,7 +31,6 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
         MatrixXd eigenvectors = eigen_solver.eigenvectors();
 
         Phi = temp_phi * eigenvectors;
-
         bool c = true;
         for (int i = 0; i < p; i++)
         {
@@ -120,17 +119,11 @@ std::vector<vector<int>> Construct_hierarchy(
     std::vector<int> VT = {start_v};
     int n = max((int)(1.5 * p), 1000);
     // int n = 2; //For Test
-    double mu = pow(vertices.size() / n, 1.0 / T);
-    // cout << mu << endl;
+    double mu = pow((double)(vertices.size()) / (double)n, 1.0 / (double)T);
     //   distance vector
     std::vector<double>
         distances(adjacency.size(), std::numeric_limits<double>::infinity());
     computeDistances(adjacency, start_v, distances);
-    // for (int i = 0; i < adjacency.size(); i++)
-    // {
-    //     cout << "dist" << i << "=" << distances[i] << endl;
-    // }
-    // cout << "dist" << start_v << "=" << distances[start_v] << endl;
     for (int i = T - 1; i > 0; i--)
     {
         std::vector<int> V_current = VT;
@@ -142,10 +135,6 @@ std::vector<vector<int>> Construct_hierarchy(
             V_current.push_back(max_index);
             // update distances
             computeDistances(adjacency, max_index, distances);
-            // for (int t = 0; t < adjacency.size(); t++)
-            // {
-            //     cout << "dist" << t << "=" << distances[t] << endl;
-            // }
         }
         hierarchy[i] = V_current;
         VT = V_current;
@@ -180,12 +169,10 @@ std::vector<SparseMatrix<double>> Build_Prolongation(
         double area = 0.5 * (e1.cross(-e3)).norm();
         A += area;
     }
-    cout << A << endl;
     // For all level
     for (int i = Hierarchy.size() - 1; i > 0; i--)
     {
         double rho = sqrt((sigma * A) / Hierarchy[i].size() * M_PI);
-        cout << rho << endl;
         SparseMatrix<double> U;
         U.resize(Hierarchy[i - 1].size(), Hierarchy[i].size());
         vector<Triplet<double>> tripletList;
@@ -221,4 +208,46 @@ std::vector<SparseMatrix<double>> Build_Prolongation(
         result[i - 1] = U;
     }
     return result;
+}
+
+std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
+    const SparseMatrix<double> &S,
+    const SparseMatrix<double> &M,
+    int p,
+    int T,
+    double epsilon,
+    std::vector<SparseMatrix<double>> U)
+{
+    vector<SparseMatrix<double>> ST;
+    vector<SparseMatrix<double>> MT;
+    ST.resize(T);
+    MT.resize(T);
+    ST[0] = S;
+    MT[0] = M;
+    // Build stiffness matrix and mass matrix for all level
+    for (int i = 1; i <= T - 1; i++)
+    {
+        ST[i] = U[i - 1].transpose() * ST[i - 1] * U[i - 1];
+        MT[i] = U[i - 1].transpose() * MT[i - 1] * U[i - 1];
+    }
+    double q = max((int)(1.5 * p), p + 8);
+    // Compute first q eigenpairs
+    MatrixXd DS = MatrixXd(ST[T - 1]);
+    MatrixXd DM = MatrixXd(MT[T - 1]);
+    GeneralizedSelfAdjointEigenSolver<MatrixXd> eigen_solver(DS, DM);
+    VectorXd temp_value = eigen_solver.eigenvalues();
+    MatrixXd temp_vector = eigen_solver.eigenvectors();
+    VectorXd eigenvalues = temp_value.head(q);
+    MatrixXd eigenvectors = temp_vector.leftCols(q);
+
+    for (int i = T - 2; i >= 0; i--)
+    {
+        MatrixXd temp_eigenvectors = U[i] * eigenvectors;
+        int j = (p + 9) / 10;
+        double mu = eigenvalues(j);
+        pair<VectorXd, MatrixXd> result = SIM(ST[i], MT[i], temp_eigenvectors, p, epsilon, mu);
+        eigenvalues = result.first;
+        eigenvectors = result.second;
+    }
+    return make_pair(eigenvalues, eigenvectors);
 }
