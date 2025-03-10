@@ -12,7 +12,7 @@ using namespace std;
 
 void readOFF(vector<Vector3d> &vertices, vector<Vector3i> &faces)
 {
-    std::ifstream file("../cube_mesh6000.off");
+    std::ifstream file("../cube_mesh10000.off");
     if (!file.is_open())
     {
         std::cerr << "Error: Could not open file " << std::endl;
@@ -76,16 +76,37 @@ int main()
     U = Build_Prolongation(Hierarchy, vertices, faces, 7);
     cout << "Finished Prolongation" << endl;
 
-    // std::ofstream file("../test/1000.txt");
-    // GeneralizedSelfAdjointEigenSolver<MatrixXd> eigen_solver(stiffness, mass);
-    // VectorXd eigenvalues = eigen_solver.eigenvalues();
-    // MatrixXd eigenvectors = eigen_solver.eigenvectors();
-    // file << eigenvalues << endl;
-    // file << eigenvectors << endl;
-
-    // MatrixXd Phi = MatrixXd::Random(stiffness.cols(), p + 100);
+    auto start = std::chrono::high_resolution_clock::now();
     pair<VectorXd, MatrixXd> result = HSIM(stiffness, mass, p, 3, 0.01, U);
-    // pair<VectorXd, MatrixXd> result = SIM(stiffness, mass, Phi, p, 0.01, 2);
-    cout << "\n特征值：" << endl;
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    cout << "Time HSIM taken: " << duration.count() << " milliseconds" << endl;
+    cout << "\n特征值:" << endl;
     cout << result.first.transpose() << endl;
+
+    // start = std::chrono::high_resolution_clock::now();
+    // MatrixXd Phi = MatrixXd::Random(stiffness.cols(), (int)(p + 8));
+    // result = SIM(stiffness, mass, Phi, p, 0.01, 2);
+    // end = std::chrono::high_resolution_clock::now();
+    // duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    // std::cout << "Time SIM taken: " << duration.count() << " milliseconds" << std::endl;
+    // cout << "\n特征值：" << endl;
+    // cout << result.first.transpose() << endl;
+
+    // {
+    //     stiffness.makeCompressed();
+    //     mass.makeCompressed();
+    //     auto start = std::chrono::high_resolution_clock::now();
+    //     SparseSymMatProd<double> opS(stiffness);
+    //     SparseCholesky<double> opM(mass);
+    //     SymGEigsSolver<SparseSymMatProd<double>, SparseCholesky<double>, GEigsMode::Cholesky> eigs(opS, opM, p, p * 2);
+    //     eigs.init();
+    //     int nconv = eigs.compute(SortRule::SmallestAlge);
+    //     VectorXd eigenvalues = eigs.eigenvalues();
+    //     MatrixXd eigenvectors = eigs.eigenvectors();
+    //     cout << eigenvalues.transpose() << endl;
+    //     auto end = std::chrono::high_resolution_clock::now();
+    //     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    //     std::cout << "Time sparse taken: " << duration.count() << " milliseconds" << std::endl;
+    // }
 }

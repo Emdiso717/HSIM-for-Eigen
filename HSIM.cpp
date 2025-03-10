@@ -9,42 +9,57 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
     double mu)
 {
     SparseMatrix<double> shifted_S = S - mu * M;
+    auto start = std::chrono::high_resolution_clock::now();
 
     Eigen::SimplicialLDLT<Eigen::SparseMatrix<double>> solver;
     solver.compute(shifted_S);
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    cout << "Time SIM LDLT shifted_S taken: " << duration.count() << " milliseconds" << endl;
 
     bool converged = false;
     Eigen::VectorXd eigenvalues;
 
     while (!converged)
     {
-
         MatrixXd temp_Mphi = M * Phi;
         MatrixXd temp_phi = solver.solve(temp_Mphi);
+        MatrixXd Reduced_S = temp_phi.transpose() * shifted_S * temp_phi;
+        MatrixXd Reduced_M = temp_phi.transpose() * M * temp_phi;
 
-        MatrixXd Reduced_S = temp_phi.transpose() * MatrixXd(shifted_S) * temp_phi;
-
-        MatrixXd Reduced_M = temp_phi.transpose() * MatrixXd(M) * temp_phi;
-
+        start = std::chrono::high_resolution_clock::now();
         GeneralizedSelfAdjointEigenSolver<MatrixXd> eigen_solver(Reduced_S, Reduced_M);
         eigenvalues = eigen_solver.eigenvalues();
         MatrixXd eigenvectors = eigen_solver.eigenvectors();
-
         Phi = temp_phi * eigenvectors;
+        end = std::chrono::high_resolution_clock::now();
+        duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+        cout << "Time SIM GeneralizedSelfAdjointEigenSolver taken: " << duration.count() << " milliseconds" << endl;
+
         bool c = true;
+        start = std::chrono::high_resolution_clock::now();
+        auto start_time1 = std::chrono::high_resolution_clock::now();
+        SimplicialLDLT<SparseMatrix<double>> M_solver;
+        M_solver.compute(M);
+        auto end_time1 = std::chrono::high_resolution_clock::now();
+        auto duration_time1 = std::chrono::duration_cast<std::chrono::milliseconds>(end_time1 - start_time1);
+        cout << "Time  SimplicialLDLT M_solver taken: " << duration_time1.count() << " milliseconds" << endl;
         for (int i = 0; i < p; i++)
         {
+            auto start_time = std::chrono::high_resolution_clock::now();
             VectorXd Sv = shifted_S * Phi.col(i);
             VectorXd Mv = M * Phi.col(i);
             VectorXd a = Sv - eigenvalues(i) * Mv;
-            SimplicialLDLT<SparseMatrix<double>> M_solver;
-            M_solver.compute(M);
             VectorXd M_inv_a = M_solver.solve(a);
 
             double norm_a = sqrt(a.dot(M_inv_a));
             VectorXd M_inv_Sv = M_solver.solve(Sv);
             double norm_b = sqrt(Sv.dot(M_inv_Sv));
             double residual = norm_a / norm_b;
+            auto end_time = std::chrono::high_resolution_clock::now();
+            auto duration_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
+            cout << "Time SIM residual taken: " << duration_time.count() << " milliseconds" << endl;
 
             if (residual >= epsilon)
             {
@@ -52,11 +67,15 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
                 break;
             }
         }
+        end = std::chrono::high_resolution_clock::now();
+        duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+        cout << "Time SIM converged taken: " << duration.count() << " milliseconds" << endl;
         if (c)
         {
             converged = true;
         }
     }
+
     eigenvalues = eigenvalues.array() + mu;
     return make_pair(eigenvalues, Phi);
 }
@@ -118,7 +137,11 @@ std::vector<vector<int>> Construct_hierarchy(
     int start_v = dis(gen);
     std::vector<int> VT = {start_v};
     int n = max((int)(1.5 * p), 1000);
-    // int n = 2; //For Test
+    // For test
+    if (n >= vertices.size())
+    {
+        n = (int)(1.5 * p);
+    }
     double mu = pow((double)(vertices.size()) / (double)n, 1.0 / (double)T);
     //   distance vector
     std::vector<double>
@@ -225,21 +248,38 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
     ST[0] = S;
     MT[0] = M;
     // Build stiffness matrix and mass matrix for all level
+    auto start = std::chrono::high_resolution_clock::now();
     for (int i = 1; i <= T - 1; i++)
     {
         ST[i] = U[i - 1].transpose() * ST[i - 1] * U[i - 1];
         MT[i] = U[i - 1].transpose() * MT[i - 1] * U[i - 1];
     }
-    double q = max((int)(1.5 * p), p + 8);
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    cout << "Time1 taken: " << duration.count() << " milliseconds" << endl;
+
+    int q = max((int)(1.5 * p), p + 8);
     // Compute first q eigenpairs
     MatrixXd DS = MatrixXd(ST[T - 1]);
     MatrixXd DM = MatrixXd(MT[T - 1]);
-    GeneralizedSelfAdjointEigenSolver<MatrixXd> eigen_solver(DS, DM);
-    VectorXd temp_value = eigen_solver.eigenvalues();
-    MatrixXd temp_vector = eigen_solver.eigenvectors();
-    VectorXd eigenvalues = temp_value.head(q);
-    MatrixXd eigenvectors = temp_vector.leftCols(q);
+    start = std::chrono::high_resolution_clock::now();
+    DenseSymMatProd<double> opS(DS);
+    DenseCholesky<double> opM(DM);
+    q = min(q, (int)DS.rows() - 1);
+    int nev = min(q * 2, (int)DS.rows());
+    SymGEigsSolver<DenseSymMatProd<double>, DenseCholesky<double>, GEigsMode::Cholesky>
+        eigs(opS, opM, q, nev);
+    eigs.init();
+    int nconv = eigs.compute(SortRule::SmallestAlge);
+    VectorXd eigenvalues = eigs.eigenvalues();
+    MatrixXd eigenvectors = eigs.eigenvectors();
+    eigenvalues.reverseInPlace();
+    eigenvectors.rowwise().reverseInPlace();
+    end = std::chrono::high_resolution_clock::now();
+    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << "Time2 dense spectra taken: " << duration.count() << " milliseconds" << std::endl;
 
+    start = std::chrono::high_resolution_clock::now();
     for (int i = T - 2; i >= 0; i--)
     {
         MatrixXd temp_eigenvectors = U[i] * eigenvectors;
@@ -249,5 +289,38 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
         eigenvalues = result.first;
         eigenvectors = result.second;
     }
+    end = std::chrono::high_resolution_clock::now();
+    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    cout << "Time3 iteration taken: " << duration.count() << " milliseconds" << endl;
     return make_pair(eigenvalues, eigenvectors);
 }
+
+// {
+//     auto start = std::chrono::high_resolution_clock::now();
+//     SparseSymMatProd<double> opS(ST[T - 1]);
+//     SparseCholesky<double> opM(MT[T - 1]);
+//     q = min(q, (int)MT[T - 1].rows() - 1);
+//     int nev = min(q * 2, (int)MT[T - 1].rows());
+//     SymGEigsSolver<SparseSymMatProd<double>, SparseCholesky<double>, GEigsMode::Cholesky> eigs(opS, opM, q, nev);
+//     eigs.init();
+//     int nconv = eigs.compute(SortRule::SmallestAlge);
+//     VectorXd eigenvalues = eigs.eigenvalues();
+//     MatrixXd eigenvectors = eigs.eigenvectors();
+//     eigenvalues.reverseInPlace();
+//     eigenvectors.rowwise().reverseInPlace();
+//     cout << eigenvalues << endl;
+//     auto end = std::chrono::high_resolution_clock::now();
+//     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+//     std::cout << "Time sparse spectra taken: " << duration.count() << " milliseconds" << std::endl;
+// }
+// auto start = std::chrono::high_resolution_clock::now();
+// MatrixXd DS = MatrixXd(ST[T - 1]);
+// MatrixXd DM = MatrixXd(MT[T - 1]);
+// GeneralizedSelfAdjointEigenSolver<MatrixXd> eigen_solver(DS, DM);
+// VectorXd temp_value = eigen_solver.eigenvalues();
+// MatrixXd temp_vector = eigen_solver.eigenvectors();
+// VectorXd eigenvalues = temp_value.head(q);
+// MatrixXd eigenvectors = temp_vector.leftCols(q);
+// auto end = std::chrono::high_resolution_clock::now();
+// auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+// std::cout << "Time taken: " << duration.count() << " milliseconds" << std::endl;

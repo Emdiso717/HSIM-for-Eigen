@@ -5,8 +5,15 @@
 #include <queue>
 #include <random>
 #include <cmath>
+#include <SymGEigsSolver.h>
+#include <MatOp/DenseSymMatProd.h>
+#include <MatOp/DenseCholesky.h>
+#include <MatOp/SparseCholesky.h>
+#include <fstream>
+#include <chrono>
 using namespace Eigen;
 using namespace std;
+using namespace Spectra;
 
 std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
     const SparseMatrix<double> &S,
@@ -15,10 +22,12 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
     int p,
     double epsilon,
     double mu);
+
 void computeDistances(
     const std::vector<std::set<std::pair<int, double>>> &adjacency,
     int source,
     std::vector<double> &distances);
+
 std::vector<vector<int>> Construct_hierarchy(std::vector<Eigen::Vector3d> vertices, std::vector<Eigen::Vector3i> faces, int T, int p);
 
 std::vector<SparseMatrix<double>> Build_Prolongation(
