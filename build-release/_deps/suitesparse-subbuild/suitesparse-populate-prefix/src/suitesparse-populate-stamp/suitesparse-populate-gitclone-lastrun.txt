@@ -1,3 +1,0 @@
-repository='https://github.com/sergiud/SuiteSparse.git'
-module=''
-tag='origin'
