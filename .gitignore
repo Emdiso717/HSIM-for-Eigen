@@ -52,3 +52,7 @@ Makefile
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+# test
+test/

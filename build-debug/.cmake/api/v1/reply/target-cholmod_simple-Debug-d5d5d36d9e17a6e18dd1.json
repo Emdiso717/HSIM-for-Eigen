@@ -1,0 +1,231 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "cholmod_simple"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_compile_definitions"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/suitesparse-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1612,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1613,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1182,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIE -fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "BLAS_UNDERSCORE"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/CHOLMOD/Include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Cholesky"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Core"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/MatrixOps"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Modify"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Supernodal"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/CHOLMOD"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/SuiteSparse_config"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "amd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "camd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "cholmod::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ccolamd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "colamd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "suitesparseconfig::@b84253b2ec68449c0035"
+		}
+	],
+	"id" : "cholmod_simple::@b84253b2ec68449c0035",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libcholmod_debug.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libpthread.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libopenblas.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libamd_debug.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libcamd_debug.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libccolamd_debug.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libcolamd_debug.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libsuitesparseconfig_debug.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "cholmod_simple",
+	"nameOnDisk" : "cholmod_simple",
+	"paths" : 
+	{
+		"build" : "_deps/suitesparse-build",
+		"source" : "build-debug/_deps/suitesparse-src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/CHOLMOD/Demo/cholmod_simple.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

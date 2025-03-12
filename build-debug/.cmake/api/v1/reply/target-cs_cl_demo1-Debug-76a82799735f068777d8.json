@@ -1,0 +1,155 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "cs_cl_demo1"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_compile_definitions"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/suitesparse-src/CXSparse/CMakeLists.txt",
+			"build-debug/_deps/suitesparse-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 293,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 296,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1182,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIE -fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "BLAS_UNDERSCORE"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "CXSPARSE_C99_COMPLEX"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/CXSparse/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CXSparse/Include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/SuiteSparse_config"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "cxsparse::@9089d5ddaaa24a39f699"
+		}
+	],
+	"id" : "cs_cl_demo1::@9089d5ddaaa24a39f699",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libcxsparse_debug.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "cs_cl_demo1",
+	"nameOnDisk" : "cs_cl_demo1",
+	"paths" : 
+	{
+		"build" : "_deps/suitesparse-build/CXSparse",
+		"source" : "build-debug/_deps/suitesparse-src/CXSparse"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/CXSparse/Demo/cs_cl_demo1.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

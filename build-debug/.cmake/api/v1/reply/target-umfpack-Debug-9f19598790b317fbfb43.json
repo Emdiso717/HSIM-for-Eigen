@@ -1,0 +1,2755 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "libumfpack_debug.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"target_link_libraries",
+			"add_compile_definitions",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/suitesparse-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1044,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1764,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1088,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 1182,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 1225,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1248,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 1459,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC -fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "BLAS_UNDERSCORE"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/AMD/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/UMFPACK/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/UMFPACK/Source"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/UMFPACK"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/CHOLMOD/Include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Cholesky"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Core"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/MatrixOps"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Modify"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Supernodal"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/CHOLMOD"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/SuiteSparse_config"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/AMD"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				347,
+				348,
+				349
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "amd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "camd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "cholmod::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "ccolamd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "colamd::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "suitesparseconfig::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int_solve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long_solve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint_solve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong_solve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int_wsolve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long_wsolve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint_wsolve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong_wsolve::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int_fixq::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long_fixq::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint_fixq::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong_fixq::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int_drop::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long_drop::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint_drop::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong_drop::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int_map_nox::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long_map_nox::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint_map_nox::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong_map_nox::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int_nomap_x::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long_nomap_x::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint_nomap_x::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong_nomap_x::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_int_map_x::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_long_map_x::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zint_map_x::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "umfpack_zlong_map_x::@b84253b2ec68449c0035"
+		}
+	],
+	"id" : "umfpack::@b84253b2ec68449c0035",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib/SuiteSparse"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"name" : "umfpack",
+	"nameOnDisk" : "libumfpack_debug.a",
+	"paths" : 
+	{
+		"build" : "_deps/suitesparse-build",
+		"source" : "build-debug/_deps/suitesparse-src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126,
+				127,
+				128,
+				129,
+				130,
+				131,
+				132,
+				133,
+				134,
+				135,
+				136,
+				137,
+				138,
+				139,
+				140,
+				141,
+				142,
+				143,
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197,
+				198,
+				199,
+				200,
+				201,
+				202,
+				203,
+				204,
+				205,
+				206,
+				207,
+				208,
+				209,
+				210,
+				211,
+				212,
+				213,
+				214,
+				215,
+				216,
+				217,
+				218,
+				219,
+				220,
+				221,
+				222,
+				223,
+				224,
+				225,
+				226,
+				227,
+				228,
+				229,
+				230,
+				231,
+				232,
+				233,
+				234,
+				235,
+				236,
+				237,
+				238,
+				239,
+				240,
+				241,
+				242,
+				243,
+				244,
+				245,
+				246,
+				247,
+				248,
+				249,
+				250,
+				251,
+				252,
+				253,
+				254,
+				255,
+				256,
+				257,
+				258,
+				259,
+				260,
+				261,
+				262,
+				263,
+				264,
+				265,
+				266,
+				267,
+				268,
+				269,
+				270,
+				271,
+				272,
+				273,
+				274,
+				275,
+				276,
+				277,
+				278,
+				279,
+				280,
+				281,
+				282,
+				283,
+				284,
+				285,
+				286,
+				287,
+				288,
+				289,
+				290,
+				291,
+				292,
+				293,
+				294,
+				295,
+				296,
+				297,
+				298,
+				299,
+				300,
+				301,
+				302,
+				303,
+				304,
+				305,
+				306,
+				307,
+				308,
+				309,
+				310,
+				311,
+				312,
+				313
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				314,
+				315,
+				316,
+				317,
+				318,
+				319,
+				320,
+				321,
+				322,
+				323,
+				324,
+				325,
+				326,
+				327,
+				328,
+				329,
+				330,
+				331,
+				332,
+				333,
+				334,
+				335,
+				336,
+				337,
+				338,
+				339,
+				340,
+				341,
+				342,
+				343,
+				344,
+				345,
+				346,
+				350
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				347,
+				348,
+				349
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_analyze.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_apply_order.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_blas3_update.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_build_tuples.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_cholmod.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_colamd.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_create_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_dump.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_extend_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_free.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_fsize.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_garbage_collection.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_get_memory.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_grow_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_init_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_is_permutation.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_kernel.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_kernel_init.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_kernel_wrapup.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_local_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_malloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_mem_alloc_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_mem_alloc_head_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_mem_alloc_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_mem_free_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_mem_init_memoryspace.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_realloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_report_perm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_row_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_scale_column.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_set_stats.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_singletons.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_start_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_symbolic_usage.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_tuple_lengths.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_valid_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umf_valid_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_col_to_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_defaults.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_free_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_free_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_get_determinant.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_get_lunz.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_get_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_get_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_load_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_load_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_qsymbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_control.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_info.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_matrix.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_perm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_status.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_save_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_save_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int.dir/UMFPACK/Source/umfpack_triplet_to_col.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_drop.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_fixq.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_map_nox.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_map_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_nomap_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_solve.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_solve.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_int_wsolve.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_analyze.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_apply_order.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_blas3_update.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_build_tuples.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_cholmod.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_colamd.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_create_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_dump.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_extend_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_free.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_fsize.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_garbage_collection.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_get_memory.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_grow_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_init_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_is_permutation.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_kernel.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_kernel_init.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_kernel_wrapup.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_local_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_malloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_mem_alloc_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_mem_alloc_head_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_mem_alloc_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_mem_free_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_mem_init_memoryspace.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_realloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_report_perm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_row_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_scale_column.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_set_stats.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_singletons.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_start_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_symbolic_usage.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_tuple_lengths.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_valid_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umf_valid_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_col_to_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_defaults.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_free_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_free_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_get_determinant.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_get_lunz.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_get_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_get_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_load_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_load_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_qsymbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_control.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_info.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_matrix.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_perm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_status.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_save_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_save_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long.dir/UMFPACK/Source/umfpack_triplet_to_col.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_drop.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_fixq.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_map_nox.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_map_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_nomap_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_solve.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_solve.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_long_wsolve.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_blas3_update.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_build_tuples.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_create_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_dump.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_extend_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_garbage_collection.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_get_memory.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_grow_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_init_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_kernel.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_kernel_init.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_kernel_wrapup.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_local_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_mem_alloc_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_mem_alloc_head_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_mem_alloc_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_mem_free_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_mem_init_memoryspace.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_row_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_scale_column.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_set_stats.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_start_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_symbolic_usage.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_tuple_lengths.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_valid_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umf_valid_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_col_to_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_defaults.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_free_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_free_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_get_determinant.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_get_lunz.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_get_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_get_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_load_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_load_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_qsymbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_control.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_info.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_matrix.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_perm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_status.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_save_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_save_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint.dir/UMFPACK/Source/umfpack_triplet_to_col.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_drop.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_fixq.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_map_nox.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_map_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_nomap_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_solve.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_solve.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zint_wsolve.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_blas3_update.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_build_tuples.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_create_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_dump.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_extend_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_garbage_collection.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_get_memory.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_grow_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_init_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_kernel.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_kernel_init.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_kernel_wrapup.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_local_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_mem_alloc_element.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_mem_alloc_head_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_mem_alloc_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_mem_free_tail_block.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_mem_init_memoryspace.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_row_search.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_scale_column.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_set_stats.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_start_front.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_symbolic_usage.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_tuple_lengths.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_valid_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umf_valid_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_col_to_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_defaults.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_free_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_free_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_get_determinant.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_get_lunz.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_get_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_get_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_load_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_load_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_qsymbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_control.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_info.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_matrix.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_perm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_status.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_report_vector.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_save_numeric.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_save_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_scale.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_symbolic.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong.dir/UMFPACK/Source/umfpack_triplet_to_col.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_drop.dir/UMFPACK/Source/umf_store_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_fixq.dir/UMFPACK/Source/umf_assemble.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_map_nox.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_map_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_nomap_x.dir/UMFPACK/Source/umf_triplet.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_solve.dir/UMFPACK/Source/umf_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_solve.dir/UMFPACK/Source/umf_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/umfpack_zlong_wsolve.dir/UMFPACK/Source/umfpack_solve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_col_to_triplet.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_defaults.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_free_numeric.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_free_symbolic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_determinant.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_lunz.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_numeric.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_symbolic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_global.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_load_numeric.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_load_symbolic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_numeric.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_qsymbolic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_control.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_info.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_matrix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_numeric.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_perm.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_status.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_symbolic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_triplet.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_vector.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_save_numeric.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_save_symbolic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_scale.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_solve.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_symbolic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_tictoc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_timer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_transpose.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_triplet_to_col.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_wsolve.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Source/umfpack_global.c",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Source/umfpack_tictoc.c",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/UMFPACK/Source/umfpack_timer.c",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 7,
+			"path" : "build-debug/_deps/suitesparse-build/include/SuiteSparse/UMFPACK/umfpack_export.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

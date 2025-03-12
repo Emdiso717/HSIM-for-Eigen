@@ -1,0 +1,871 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/suitesparse-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1472,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1494,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1496,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1642,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1764,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/AMD",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/AMD/Include/amd.h",
+				"build-debug/_deps/suitesparse-src/AMD/Include/amd_internal.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/AMD/amd_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/BTF",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/BTF/Include/btf.h",
+				"build-debug/_deps/suitesparse-src/BTF/Include/btf_internal.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/BTF/btf_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/CAMD",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/CAMD/Include/camd.h",
+				"build-debug/_deps/suitesparse-src/CAMD/Include/camd_internal.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/CAMD/camd_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/CCOLAMD",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/CCOLAMD/Include/ccolamd.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/CCOLAMD/ccolamd_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/COLAMD",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/COLAMD/Include/colamd.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/COLAMD/colamd_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/UMFPACK",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_col_to_triplet.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_defaults.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_free_numeric.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_free_symbolic.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_determinant.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_lunz.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_numeric.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_get_symbolic.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_global.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_load_numeric.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_load_symbolic.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_numeric.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_qsymbolic.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_control.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_info.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_matrix.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_numeric.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_perm.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_status.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_symbolic.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_triplet.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_report_vector.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_save_numeric.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_save_symbolic.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_scale.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_solve.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_symbolic.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_tictoc.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_timer.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_transpose.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_triplet_to_col.h",
+				"build-debug/_deps/suitesparse-src/UMFPACK/Include/umfpack_wsolve.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/UMFPACK/umfpack_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/KLU",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/KLU/Include/klu.h",
+				"build-debug/_deps/suitesparse-src/KLU/Include/klu_internal.h",
+				"build-debug/_deps/suitesparse-src/KLU/Include/klu_version.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/KLU/klu_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/LDL",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/LDL/Include/ldl.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/LDL/ldl_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/SuiteSparse_config/SuiteSparse_config.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/SuiteSparse_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/CHOLMOD",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-build/CHOLMOD/Include/cholmod_config.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_blas.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_camd.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_check.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_cholesky.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_complexity.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_core.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_function.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_gpu.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_gpu_kernels.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_internal.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_io64.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_matrixops.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_modify.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_partition.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_supernodal.h",
+				"build-debug/_deps/suitesparse-src/CHOLMOD/Include/cholmod_template.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/CHOLMOD/cholmod_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Development",
+			"destination" : "include/SuiteSparse/SPQR",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-src/SPQR/Include/SuiteSparseQR.hpp",
+				"build-debug/_deps/suitesparse-src/SPQR/Include/SuiteSparseQR_C.h",
+				"build-debug/_deps/suitesparse-src/SPQR/Include/SuiteSparseQR_definitions.h",
+				"build-debug/_deps/suitesparse-build/include/SuiteSparse/SPQR/SuiteSparseQR_export.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "lib/SuiteSparse/cmake",
+			"exportName" : "suitesparse-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "amd::@b84253b2ec68449c0035",
+					"index" : 1
+				},
+				{
+					"id" : "btf::@b84253b2ec68449c0035",
+					"index" : 9
+				},
+				{
+					"id" : "camd::@b84253b2ec68449c0035",
+					"index" : 12
+				},
+				{
+					"id" : "ccolamd::@b84253b2ec68449c0035",
+					"index" : 19
+				},
+				{
+					"id" : "colamd::@b84253b2ec68449c0035",
+					"index" : 28
+				},
+				{
+					"id" : "umfpack::@b84253b2ec68449c0035",
+					"index" : 96
+				},
+				{
+					"id" : "klu::@b84253b2ec68449c0035",
+					"index" : 66
+				},
+				{
+					"id" : "ldl::@b84253b2ec68449c0035",
+					"index" : 75
+				},
+				{
+					"id" : "suitesparseconfig::@b84253b2ec68449c0035",
+					"index" : 93
+				},
+				{
+					"id" : "cholmod::@b84253b2ec68449c0035",
+					"index" : 22
+				},
+				{
+					"id" : "spqr::@b84253b2ec68449c0035",
+					"index" : 90
+				},
+				{
+					"id" : "amd_demo::@b84253b2ec68449c0035",
+					"index" : 2
+				},
+				{
+					"id" : "amd_demo2::@b84253b2ec68449c0035",
+					"index" : 3
+				},
+				{
+					"id" : "amd_l_demo::@b84253b2ec68449c0035",
+					"index" : 5
+				},
+				{
+					"id" : "camd_demo::@b84253b2ec68449c0035",
+					"index" : 13
+				},
+				{
+					"id" : "camd_demo2::@b84253b2ec68449c0035",
+					"index" : 14
+				},
+				{
+					"id" : "camd_l_demo::@b84253b2ec68449c0035",
+					"index" : 16
+				},
+				{
+					"id" : "camd_simple::@b84253b2ec68449c0035",
+					"index" : 18
+				},
+				{
+					"id" : "colamd_example::@b84253b2ec68449c0035",
+					"index" : 29
+				},
+				{
+					"id" : "colamd_l_example::@b84253b2ec68449c0035",
+					"index" : 31
+				},
+				{
+					"id" : "ldlamd::@b84253b2ec68449c0035",
+					"index" : 78
+				},
+				{
+					"id" : "ldlmain::@b84253b2ec68449c0035",
+					"index" : 82
+				},
+				{
+					"id" : "ldlsimple::@b84253b2ec68449c0035",
+					"index" : 83
+				},
+				{
+					"id" : "umf4::@b84253b2ec68449c0035",
+					"index" : 95
+				},
+				{
+					"id" : "umfpack_di_demo::@b84253b2ec68449c0035",
+					"index" : 97
+				},
+				{
+					"id" : "umfpack_dl_demo::@b84253b2ec68449c0035",
+					"index" : 98
+				},
+				{
+					"id" : "umfpack_simple::@b84253b2ec68449c0035",
+					"index" : 115
+				},
+				{
+					"id" : "umfpack_zi_demo::@b84253b2ec68449c0035",
+					"index" : 116
+				},
+				{
+					"id" : "umfpack_zl_demo::@b84253b2ec68449c0035",
+					"index" : 125
+				},
+				{
+					"id" : "qrdemo::@b84253b2ec68449c0035",
+					"index" : 84
+				},
+				{
+					"id" : "qrdemoc::@b84253b2ec68449c0035",
+					"index" : 85
+				},
+				{
+					"id" : "qrsimple::@b84253b2ec68449c0035",
+					"index" : 86
+				},
+				{
+					"id" : "qrsimplec::@b84253b2ec68449c0035",
+					"index" : 87
+				}
+			],
+			"paths" : 
+			[
+				"_deps/suitesparse-build/CMakeFiles/Export/lib/SuiteSparse/cmake/suitesparse-targets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse/cmake",
+			"paths" : 
+			[
+				"build-debug/_deps/suitesparse-build/suitesparse-config.cmake",
+				"build-debug/_deps/suitesparse-build/suitesparse-config-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"kludemo"
+			],
+			"targetId" : "kludemo::@b84253b2ec68449c0035",
+			"targetIndex" : 72,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"kluldemo"
+			],
+			"targetId" : "kluldemo::@b84253b2ec68449c0035",
+			"targetIndex" : 73,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libamd_debug.a"
+			],
+			"targetId" : "amd::@b84253b2ec68449c0035",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libbtf_debug.a"
+			],
+			"targetId" : "btf::@b84253b2ec68449c0035",
+			"targetIndex" : 9,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libcamd_debug.a"
+			],
+			"targetId" : "camd::@b84253b2ec68449c0035",
+			"targetIndex" : 12,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libccolamd_debug.a"
+			],
+			"targetId" : "ccolamd::@b84253b2ec68449c0035",
+			"targetIndex" : 19,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libcolamd_debug.a"
+			],
+			"targetId" : "colamd::@b84253b2ec68449c0035",
+			"targetIndex" : 28,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libumfpack_debug.a"
+			],
+			"targetId" : "umfpack::@b84253b2ec68449c0035",
+			"targetIndex" : 96,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libklu_debug.a"
+			],
+			"targetId" : "klu::@b84253b2ec68449c0035",
+			"targetIndex" : 66,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libldl_debug.a"
+			],
+			"targetId" : "ldl::@b84253b2ec68449c0035",
+			"targetIndex" : 75,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libsuitesparseconfig_debug.a"
+			],
+			"targetId" : "suitesparseconfig::@b84253b2ec68449c0035",
+			"targetIndex" : 93,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libcholmod_debug.a"
+			],
+			"targetId" : "cholmod::@b84253b2ec68449c0035",
+			"targetIndex" : 22,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Development",
+			"destination" : "lib/SuiteSparse",
+			"paths" : 
+			[
+				"libspqr_debug.a"
+			],
+			"targetId" : "spqr::@b84253b2ec68449c0035",
+			"targetIndex" : 90,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"amd_demo"
+			],
+			"targetId" : "amd_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"amd_demo2"
+			],
+			"targetId" : "amd_demo2::@b84253b2ec68449c0035",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"amd_l_demo"
+			],
+			"targetId" : "amd_l_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 5,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"camd_demo"
+			],
+			"targetId" : "camd_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 13,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"camd_demo2"
+			],
+			"targetId" : "camd_demo2::@b84253b2ec68449c0035",
+			"targetIndex" : 14,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"camd_l_demo"
+			],
+			"targetId" : "camd_l_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 16,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"camd_simple"
+			],
+			"targetId" : "camd_simple::@b84253b2ec68449c0035",
+			"targetIndex" : 18,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"colamd_example"
+			],
+			"targetId" : "colamd_example::@b84253b2ec68449c0035",
+			"targetIndex" : 29,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"colamd_l_example"
+			],
+			"targetId" : "colamd_l_example::@b84253b2ec68449c0035",
+			"targetIndex" : 31,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"ldlamd"
+			],
+			"targetId" : "ldlamd::@b84253b2ec68449c0035",
+			"targetIndex" : 78,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"ldlmain"
+			],
+			"targetId" : "ldlmain::@b84253b2ec68449c0035",
+			"targetIndex" : 82,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"ldlsimple"
+			],
+			"targetId" : "ldlsimple::@b84253b2ec68449c0035",
+			"targetIndex" : 83,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"umf4"
+			],
+			"targetId" : "umf4::@b84253b2ec68449c0035",
+			"targetIndex" : 95,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"umfpack_di_demo"
+			],
+			"targetId" : "umfpack_di_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 97,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"umfpack_dl_demo"
+			],
+			"targetId" : "umfpack_dl_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 98,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"umfpack_simple"
+			],
+			"targetId" : "umfpack_simple::@b84253b2ec68449c0035",
+			"targetIndex" : 115,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"umfpack_zi_demo"
+			],
+			"targetId" : "umfpack_zi_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 116,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"umfpack_zl_demo"
+			],
+			"targetId" : "umfpack_zl_demo::@b84253b2ec68449c0035",
+			"targetIndex" : 125,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"qrdemo"
+			],
+			"targetId" : "qrdemo::@b84253b2ec68449c0035",
+			"targetIndex" : 84,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"qrdemoc"
+			],
+			"targetId" : "qrdemoc::@b84253b2ec68449c0035",
+			"targetIndex" : 85,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"qrsimple"
+			],
+			"targetId" : "qrsimple::@b84253b2ec68449c0035",
+			"targetIndex" : 86,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"qrsimplec"
+			],
+			"targetId" : "qrsimplec::@b84253b2ec68449c0035",
+			"targetIndex" : 87,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/suitesparse-build",
+		"source" : "build-debug/_deps/suitesparse-src"
+	}
+}

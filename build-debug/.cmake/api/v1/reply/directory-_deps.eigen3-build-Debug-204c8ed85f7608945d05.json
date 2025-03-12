@@ -1,0 +1,101 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/eigen3-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 464,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 476,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 640,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 642,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Devel",
+			"destination" : "include/eigen3",
+			"paths" : 
+			[
+				"build-debug/_deps/eigen3-src/signature_of_eigen3_matrix_library"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Devel",
+			"destination" : "include/eigen3",
+			"paths" : 
+			[
+				"build-debug/_deps/eigen3-src/Eigen"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "share/eigen3/cmake",
+			"exportName" : "Eigen3Targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "eigen::@a7f6cda76e36d828b47e",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"_deps/eigen3-build/CMakeFiles/Export/share/eigen3/cmake/Eigen3Targets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "share/eigen3/cmake",
+			"paths" : 
+			[
+				"build-debug/_deps/eigen3-src/cmake/UseEigen3.cmake",
+				"build-debug/_deps/eigen3-build/Eigen3Config.cmake",
+				"build-debug/_deps/eigen3-build/Eigen3ConfigVersion.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/eigen3-build",
+		"source" : "build-debug/_deps/eigen3-src"
+	}
+}

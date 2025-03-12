@@ -1,0 +1,368 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_diagnostics.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_dump.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_extract.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_factor.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_free_numeric.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_kernel.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_refactor.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_scale.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_solve.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_sort.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_tsolve.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_defaults.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_analyze.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_analyze_given.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_free_symbolic.c.o"
+		},
+		{
+			"path" : "_deps/suitesparse-build/CMakeFiles/klu_long.dir/./KLU/Source/klu_memory.c.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_compile_definitions",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/suitesparse-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1109,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1182,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1111,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1112,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 1110,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC -fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "BLAS_UNDERSCORE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "DLONG"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "klu_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/KLU/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/KLU"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/AMD/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/AMD"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/SuiteSparse_config"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/BTF/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/BTF"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/COLAMD/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/COLAMD"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/CHOLMOD/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Cholesky"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Core"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/MatrixOps"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Modify"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CHOLMOD/Supernodal"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse/CHOLMOD"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			]
+		}
+	],
+	"id" : "klu_long::@b84253b2ec68449c0035",
+	"name" : "klu_long",
+	"paths" : 
+	{
+		"build" : "_deps/suitesparse-build",
+		"source" : "build-debug/_deps/suitesparse-src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_diagnostics.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_dump.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_extract.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_factor.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_free_numeric.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_kernel.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_refactor.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_scale.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_solve.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_sort.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_tsolve.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_defaults.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_analyze.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_analyze_given.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_free_symbolic.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/KLU/Source/klu_memory.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

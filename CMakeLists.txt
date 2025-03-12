@@ -1,26 +1,31 @@
 cmake_minimum_required(VERSION 3.5)
 project(HSIM)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -ffunction-sections -fdata-sections")
-set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
+include(cmake/CPM.cmake)
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/;"${CMAKE_MODULE_PATH})
 
-# Include Eigen
-include_directories(${PROJECT_SOURCE_DIR}/eigen-3.4.0)
-include_directories(${PROJECT_SOURCE_DIR}/Spectra)
+message("cmake build type: ${CMAKE_BUILD_TYPE}")
+if("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 ")
+endif()
+#enable all instructions
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -Wno-c++11-narrowing -Wno-unused-variable -Wno-unused-parameter -Wno-array-bounds -Wno-dangling-reference -Wno-tautological-compare")
 
-# Add source files
-set(SOURCES
-    main.cpp
-    HSIM.cpp
-    laplace_3d.cpp
+set(INCLUDES
+  suitesparse
+  openmp
+  eigen 
+  spectra
+  fast_matrix_market
 )
 
-# Add header files
-set(HEADERS
-    HSIM.h
-)
+foreach(INCLUDE IN LISTS INCLUDES)
+    include(cmake/include_${INCLUDE}.cmake)
+    message("Load ${INCLUDE} done.")
+endforeach()
 
-# Create executable
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+include_directories(src)
+add_subdirectory(src)
+add_executable(HSIM main.cpp)
+target_link_libraries(HSIM eigen_solver)
+

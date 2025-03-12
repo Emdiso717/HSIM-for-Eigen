@@ -1,0 +1,1655 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "libcxsparse_debug.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"add_compile_definitions",
+			"target_compile_definitions",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/suitesparse-src/CXSparse/CMakeLists.txt",
+			"build-debug/_deps/suitesparse-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 179,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 243,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1182,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 228,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 215,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 187,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 201,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC -fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "BLAS_UNDERSCORE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "CXSPARSE_C99_COMPLEX"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/CXSparse/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/CXSparse/Include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-build/include/SuiteSparse"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/emdiso/c/HSIM/HSIM-for-Eigen/build-debug/_deps/suitesparse-src/SuiteSparse_config"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				107
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "suitesparsebase::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "cxsparse_int::@9089d5ddaaa24a39f699"
+		},
+		{
+			"id" : "cxsparse_long::@9089d5ddaaa24a39f699"
+		},
+		{
+			"id" : "cxsparse_complex_int::@9089d5ddaaa24a39f699"
+		},
+		{
+			"id" : "cxsparse_complex_long::@9089d5ddaaa24a39f699"
+		}
+	],
+	"id" : "cxsparse::@9089d5ddaaa24a39f699",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib/CXSparse"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"name" : "cxsparse",
+	"nameOnDisk" : "libcxsparse_debug.a",
+	"paths" : 
+	{
+		"build" : "_deps/suitesparse-build/CXSparse",
+		"source" : "build-debug/_deps/suitesparse-src/CXSparse"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126,
+				127,
+				128,
+				129,
+				130,
+				131,
+				132,
+				133,
+				134,
+				135,
+				136,
+				137,
+				138,
+				139,
+				140,
+				141,
+				142,
+				143,
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197,
+				198,
+				199,
+				200,
+				201,
+				202,
+				203,
+				204,
+				205,
+				206,
+				207,
+				208,
+				209
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				103,
+				104,
+				105,
+				106
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				107
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_add.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_amd.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_chol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_cholsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_compress.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_counts.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_cumsum.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_dfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_dmperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_droptol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_dropzeros.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_dupl.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_entry.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_ereach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_etree.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_fkeep.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_gaxpy.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_happly.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_house.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_ipvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_leaf.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_load.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_lusol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_malloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_maxtrans.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_multiply.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_norm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_permute.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_pinv.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_post.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_print.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_pvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_qr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_qrsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_randperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_reach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_scatter.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_scc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_schol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_spsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_sqr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_symperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_tdfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_updown.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_util.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_int.dir/Source/cs_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_add.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_amd.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_chol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_cholsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_compress.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_counts.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_cumsum.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_dfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_dmperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_droptol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_dropzeros.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_dupl.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_entry.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_ereach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_etree.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_fkeep.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_gaxpy.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_happly.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_house.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_ipvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_leaf.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_load.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_lusol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_malloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_maxtrans.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_multiply.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_norm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_permute.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_pinv.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_post.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_print.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_pvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_qr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_qrsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_randperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_reach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_scatter.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_scc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_schol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_spsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_sqr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_symperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_tdfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_updown.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_util.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_long.dir/Source/cs_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/suitesparsebase.dir/SuiteSparse_config/SuiteSparse_config.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/include/cs_export.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-build/include/SuiteSparse/SuiteSparse_export.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/SuiteSparse_config/SuiteSparse_config.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/CXSparse/Include/cs.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "build-debug/_deps/suitesparse-src/CXSparse/Source/cs_convert.c",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_add.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_amd.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_chol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_cholsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_compress.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_counts.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_cumsum.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_dfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_dmperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_droptol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_dropzeros.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_dupl.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_entry.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_ereach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_etree.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_fkeep.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_gaxpy.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_happly.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_house.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_ipvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_leaf.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_load.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_lusol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_malloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_maxtrans.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_multiply.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_norm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_permute.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_pinv.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_post.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_print.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_pvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_qr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_qrsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_randperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_reach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_scatter.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_scc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_schol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_spsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_sqr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_symperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_tdfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_updown.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_util.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_int.dir/Source/cs_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_add.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_amd.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_chol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_cholsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_compress.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_counts.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_cumsum.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_dfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_dmperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_droptol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_dropzeros.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_dupl.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_entry.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_ereach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_etree.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_fkeep.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_gaxpy.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_happly.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_house.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_ipvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_leaf.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_load.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_lsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_ltsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_lu.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_lusol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_malloc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_maxtrans.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_multiply.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_norm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_permute.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_pinv.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_post.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_print.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_pvec.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_qr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_qrsol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_randperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_reach.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_scatter.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_scc.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_schol.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_spsolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_sqr.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_symperm.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_tdfs.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_transpose.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_updown.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_usolve.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_util.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CXSparse/CMakeFiles/cxsparse_complex_long.dir/Source/cs_utsolve.c.o",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

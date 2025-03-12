@@ -1,18 +1,16 @@
-
-#include <Eigen/Dense>
 #include <vector>
 #include <fstream>
 #include <sstream>
 #include <iostream>
 #include "HSIM.h"
-#include "laplace_3d.cpp"
+#include "laplace_3d.h"
 
 using namespace Eigen;
 using namespace std;
 
 void readOFF(vector<Vector3d> &vertices, vector<Vector3i> &faces)
 {
-    std::ifstream file("../cube_mesh10000.off");
+    std::ifstream file("../test/cube_mesh10000.off");
     if (!file.is_open())
     {
         std::cerr << "Error: Could not open file " << std::endl;
@@ -60,14 +58,15 @@ int main()
 
     readOFF(vertices, faces);
     int p = 10;
+    int layer = 3;
     LaplaceBeltrami3D k(vertices, faces);
     Eigen::SparseMatrix<double> stiffness;
     Eigen::SparseMatrix<double> mass;
     k.computeMatrices(stiffness, mass);
 
-    // build hierarchy
+    // // build hierarchy
     vector<vector<int>> Hierarchy;
-    Hierarchy = Construct_hierarchy(vertices, faces, 3, p);
+    Hierarchy = Construct_hierarchy(vertices, faces, layer, p);
     for (auto H : Hierarchy)
     {
         cout << H.size() << endl;
@@ -77,18 +76,18 @@ int main()
     cout << "Finished Prolongation" << endl;
 
     auto start = std::chrono::high_resolution_clock::now();
-    pair<VectorXd, MatrixXd> result = HSIM(stiffness, mass, p, 3, 0.01, U);
+    pair<VectorXd, MatrixXd> result = HSIM(stiffness, mass, p, layer, 0.01, U);
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     cout << "Time HSIM taken: " << duration.count() << " milliseconds" << endl;
     cout << "\n特征值:" << endl;
     cout << result.first.transpose() << endl;
 
-    // start = std::chrono::high_resolution_clock::now();
+    // auto start = std::chrono::high_resolution_clock::now();
     // MatrixXd Phi = MatrixXd::Random(stiffness.cols(), (int)(p + 8));
-    // result = SIM(stiffness, mass, Phi, p, 0.01, 2);
-    // end = std::chrono::high_resolution_clock::now();
-    // duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    // auto result = SIM(stiffness, mass, Phi, p, 0.01, 10);
+    // auto end = std::chrono::high_resolution_clock::now();
+    // auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     // std::cout << "Time SIM taken: " << duration.count() << " milliseconds" << std::endl;
     // cout << "\n特征值：" << endl;
     // cout << result.first.transpose() << endl;

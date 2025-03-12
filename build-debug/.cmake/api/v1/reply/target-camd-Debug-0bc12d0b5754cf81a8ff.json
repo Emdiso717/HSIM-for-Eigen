@@ -1,0 +1,308 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "libcamd_debug.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"target_link_libraries",
+			"add_compile_definitions",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"build-debug/_deps/suitesparse-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 691,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1764,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1243,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 1182,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 1199,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 1459,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "camd_int::@b84253b2ec68449c0035"
+		},
+		{
+			"id" : "camd_long::@b84253b2ec68449c0035"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "suitesparseconfig::@b84253b2ec68449c0035"
+		}
+	],
+	"id" : "camd::@b84253b2ec68449c0035",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib/SuiteSparse"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"name" : "camd",
+	"nameOnDisk" : "libcamd_debug.a",
+	"paths" : 
+	{
+		"build" : "_deps/suitesparse-build",
+		"source" : "build-debug/_deps/suitesparse-src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				24,
+				25,
+				26
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_1.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_2.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_aat.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_control.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_defaults.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_dump.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_global.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_info.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_order.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_postorder.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_preprocess.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_int.dir/CAMD/Source/camd_valid.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_1.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_2.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_aat.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_control.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_defaults.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_dump.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_global.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_info.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_order.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_postorder.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_preprocess.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build-debug/_deps/suitesparse-build/CMakeFiles/camd_long.dir/CAMD/Source/camd_valid.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/CAMD/Include/camd.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build-debug/_deps/suitesparse-src/CAMD/Include/camd_internal.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build-debug/_deps/suitesparse-build/include/SuiteSparse/CAMD/camd_export.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
