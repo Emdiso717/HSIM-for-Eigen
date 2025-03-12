@@ -2,6 +2,7 @@
 build/
 out/
 cmake-build-*/
+build-release/
 
 # IDE specific files
 .vs/

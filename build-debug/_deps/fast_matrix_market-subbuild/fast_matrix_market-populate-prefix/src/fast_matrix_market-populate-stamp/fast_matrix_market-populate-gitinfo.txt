@@ -1,3 +1,0 @@
-repository='https://github.com/alugowski/fast_matrix_market.git'
-module=''
-tag='origin'
