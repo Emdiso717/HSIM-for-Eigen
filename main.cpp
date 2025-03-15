@@ -1,111 +1,56 @@
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <iostream>
 #include "HSIM.h"
-#include "laplace_3d.h"
-
-using namespace Eigen;
+#include <CLI/CLI.hpp>
+#include "save_spm.hpp"
+#include <cstring>
+#include "testing.h"
+#define DISABLE_COUT std::cout.setstate(std::ios_base::failbit)
+#define ENABLE_COUT std::cout.clear()
 using namespace std;
+using namespace Eigen;
 
-void readOFF(vector<Vector3d> &vertices, vector<Vector3i> &faces)
+int main(int argc, char **argv)
 {
-    std::ifstream file("../test/cube_mesh10000.off");
-    if (!file.is_open())
-    {
-        std::cerr << "Error: Could not open file " << std::endl;
-    }
-    std::string line;
-    // OFF
-    std::getline(file, line);
-    int nv = 0, nf = 0, ne = 0;
-    std::getline(file, line);
-    std::istringstream iss(line);
-    iss >> nv >> nf >> ne;
-    vertices.resize(nv);
-    faces.resize(nf);
-    for (int i = 0; i < nv; i++)
-    {
-        while (std::getline(file, line))
-        {
-            if (line.empty() || line[0] == '#')
-                continue;
-            std::istringstream iss(line);
-            iss >> vertices[i](0) >> vertices[i](1) >> vertices[i](2);
-            break;
-        }
-    }
-    for (int i = 0; i < nf; i++)
-    {
-        while (std::getline(file, line))
-        {
-            if (line.empty() || line[0] == '#')
-                continue;
-            std::istringstream iss(line);
-            int numVerticesInFace;
-            iss >> numVerticesInFace;
-            iss >> faces[i](0) >> faces[i](1) >> faces[i](2);
-            break;
-        }
-    }
-    file.close();
-}
-
-int main()
-{
-    vector<Vector3d> vertices;
-    vector<Vector3i> faces;
-
-    readOFF(vertices, faces);
+    CLI::App app;
+    std::map<int, std::pair<int, std::string>> map;
     int p = 10;
-    int layer = 3;
-    LaplaceBeltrami3D k(vertices, faces);
-    Eigen::SparseMatrix<double> stiffness;
-    Eigen::SparseMatrix<double> mass;
-    k.computeMatrices(stiffness, mass);
-
-    // // build hierarchy
-    vector<vector<int>> Hierarchy;
-    Hierarchy = Construct_hierarchy(vertices, faces, layer, p);
-    for (auto H : Hierarchy)
-    {
-        cout << H.size() << endl;
-    }
+    SparseMatrix<double> S;
+    string S_path, M_path;
+    SparseMatrix<double> M;
     vector<SparseMatrix<double>> U;
-    U = Build_Prolongation(Hierarchy, vertices, faces, 7);
-    cout << "Finished Prolongation" << endl;
-
+    vector<string> U_paths;
+    string metric = "I";
+    double epsilon = 1e-6;
+    app.add_option("--num", p, "Number of Eigenpairs");
+    app.add_option("-M", M_path, "Path of the mass matrix")->check(CLI::ExistingFile);
+    app.add_option("-K", S_path, "Path of the stiffness matrix")->check(CLI::ExistingFile);
+    app.add_option("-U", U_paths, "Path of prolongation matrix")->check(CLI::ExistingFile);
+    app.add_option("--metric", metric, "Form of metric (I or Minv)")->check(CLI::IsMember{std::vector<std::string>{"I", "Minv"}});
+    app.add_option("--epsilon", epsilon, "Convergence factor");
+    CLI11_PARSE(app, argc, argv);
+    zcy::io::read_spm(M_path.c_str(), M);
+    zcy::io::read_spm(S_path.c_str(), S);
+    int layer = 1;
+    for (auto &U_path : U_paths)
+    {
+        SparseMatrix<double> temp_u;
+        zcy::io::read_spm(U_path.c_str(), temp_u);
+        U.push_back(temp_u);
+        layer++;
+    }
+    DISABLE_COUT;
+    // Eigen solver
     auto start = std::chrono::high_resolution_clock::now();
-    pair<VectorXd, MatrixXd> result = HSIM(stiffness, mass, p, layer, 0.01, U);
+    pair<VectorXd, MatrixXd> result = HSIM(S, M, p, layer, epsilon, U, metric);
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    cout << "Time HSIM taken: " << duration.count() << " milliseconds" << endl;
-    cout << "\n特征值:" << endl;
+    std::cout << "Time HSIM taken: " << duration.count() << " milliseconds" << std::endl;
+    ENABLE_COUT;
+    cout << "Eigen values:" << endl;
     cout << result.first.transpose() << endl;
-
-    // auto start = std::chrono::high_resolution_clock::now();
-    // MatrixXd Phi = MatrixXd::Random(stiffness.cols(), (int)(p + 8));
-    // auto result = SIM(stiffness, mass, Phi, p, 0.01, 10);
-    // auto end = std::chrono::high_resolution_clock::now();
-    // auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    // std::cout << "Time SIM taken: " << duration.count() << " milliseconds" << std::endl;
-    // cout << "\n特征值：" << endl;
-    // cout << result.first.transpose() << endl;
-
-    // {
-    //     stiffness.makeCompressed();
-    //     mass.makeCompressed();
-    //     auto start = std::chrono::high_resolution_clock::now();
-    //     SparseSymMatProd<double> opS(stiffness);
-    //     SparseCholesky<double> opM(mass);
-    //     SymGEigsSolver<SparseSymMatProd<double>, SparseCholesky<double>, GEigsMode::Cholesky> eigs(opS, opM, p, p * 2);
-    //     eigs.init();
-    //     int nconv = eigs.compute(SortRule::SmallestAlge);
-    //     VectorXd eigenvalues = eigs.eigenvalues();
-    //     MatrixXd eigenvectors = eigs.eigenvectors();
-    //     cout << eigenvalues.transpose() << endl;
-    //     auto end = std::chrono::high_resolution_clock::now();
-    //     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    //     std::cout << "Time sparse taken: " << duration.count() << " milliseconds" << std::endl;
-    // }
 }
+
+// int main()
+// {
+//     testing::Eigen_solver();
+//     testing::Get_Matrix_MSU();
+// }

@@ -6,6 +6,7 @@ target_link_libraries(eigen_solver
   Eigen3_WITH_BLAS
   Spectra
   SuiteSparse::CHOLMOD
+  CLI11::CLI11
 )
 
 

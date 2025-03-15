@@ -17,6 +17,7 @@ set(INCLUDES
   eigen 
   spectra
   fast_matrix_market
+  cli11
 )
 
 foreach(INCLUDE IN LISTS INCLUDES)

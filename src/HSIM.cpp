@@ -1,25 +1,27 @@
 #include "HSIM.h"
+using namespace std;
+using namespace Eigen;
+using namespace Spectra;
 
-std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
+pair<VectorXd, MatrixXd> SIM(
     const SparseMatrix<double> &S,
     const SparseMatrix<double> &M,
     MatrixXd &Phi,
-    int p,
-    double epsilon,
-    double mu)
+    const int &p,
+    const double &epsilon,
+    const double &mu,
+    const string &metric)
 {
     SparseMatrix<double> shifted_S = S - mu * M;
-    auto start = std::chrono::high_resolution_clock::now();
-    // Eigen::SimplicialLDLT<Eigen::SparseMatrix<double>> solver;
-    // solver.compute(shifted_S);
-    Eigen::CholmodSupernodalLLT<Eigen::SparseMatrix<double>> solver;
+    auto start = chrono::high_resolution_clock::now();
+    CholmodSupernodalLLT<SparseMatrix<double>> solver;
     solver.compute(shifted_S);
-    auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto end = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
     cout << "Time SIM LDLT shifted_S taken: " << duration.count() << " milliseconds" << endl;
 
     bool converged = false;
-    Eigen::VectorXd eigenvalues;
+    VectorXd eigenvalues;
 
     while (!converged)
     {
@@ -28,47 +30,71 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
         MatrixXd Reduced_S = temp_phi.transpose() * shifted_S * temp_phi;
         MatrixXd Reduced_M = temp_phi.transpose() * M * temp_phi;
 
-        start = std::chrono::high_resolution_clock::now();
+        start = chrono::high_resolution_clock::now();
         GeneralizedSelfAdjointEigenSolver<MatrixXd> eigen_solver(Reduced_S, Reduced_M);
         eigenvalues = eigen_solver.eigenvalues();
         MatrixXd eigenvectors = eigen_solver.eigenvectors();
-        Phi = temp_phi * eigenvectors;
-        end = std::chrono::high_resolution_clock::now();
-        duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+        end = chrono::high_resolution_clock::now();
+        duration = chrono::duration_cast<chrono::milliseconds>(end - start);
         cout << "Time SIM GeneralizedSelfAdjointEigenSolver taken: " << duration.count() << " milliseconds" << endl;
 
+        Phi = temp_phi * eigenvectors;
+        // Check converged
         bool c = true;
-        start = std::chrono::high_resolution_clock::now();
-        auto start_time1 = std::chrono::high_resolution_clock::now();
-        Eigen::CholmodSupernodalLLT<Eigen::SparseMatrix<double>> M_solver;
-        M_solver.compute(M);
-        auto end_time1 = std::chrono::high_resolution_clock::now();
-        auto duration_time1 = std::chrono::duration_cast<std::chrono::milliseconds>(end_time1 - start_time1);
-        cout << "Time  SimplicialLDLT M_solver taken: " << duration_time1.count() << " milliseconds" << endl;
-        for (int i = 0; i < p; i++)
+        start = chrono::high_resolution_clock::now();
+        if (metric == "I")
         {
-            auto start_time = std::chrono::high_resolution_clock::now();
-            VectorXd Sv = shifted_S * Phi.col(i);
-            VectorXd Mv = M * Phi.col(i);
-            VectorXd a = Sv - eigenvalues(i) * Mv;
-            VectorXd M_inv_a = M_solver.solve(a);
-
-            double norm_a = sqrt(a.dot(M_inv_a));
-            VectorXd M_inv_Sv = M_solver.solve(Sv);
-            double norm_b = sqrt(Sv.dot(M_inv_Sv));
-            double residual = norm_a / norm_b;
-            auto end_time = std::chrono::high_resolution_clock::now();
-            auto duration_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
-            cout << "Time SIM residual taken: " << duration_time.count() << " milliseconds" << endl;
-
-            if (residual >= epsilon)
+            int i = 0;
+            for (i = 0; i < p; i++)
             {
-                c = false;
-                break;
+                VectorXd Sv = shifted_S * Phi.col(i);
+                VectorXd Mv = M * Phi.col(i);
+                double norm_a = (Sv - eigenvalues(i) * Mv).norm();
+                double norm_b = Mv.norm();
+                double residual = norm_a / norm_b;
+                if (residual >= epsilon)
+                {
+                    c = false;
+                    break;
+                }
             }
         }
-        end = std::chrono::high_resolution_clock::now();
-        duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+        /*M^-1 Norm*/
+        /*LDLT for M*/
+        else
+        {
+
+            auto start_time1 = std::chrono::high_resolution_clock::now();
+            Eigen::CholmodSupernodalLLT<Eigen::SparseMatrix<double>> M_solver;
+            M_solver.compute(M);
+            auto end_time1 = std::chrono::high_resolution_clock::now();
+            auto duration_time1 = std::chrono::duration_cast<std::chrono::milliseconds>(end_time1 - start_time1);
+            cout << "Time  SimplicialLDLT M_solver taken: " << duration_time1.count() << " milliseconds" << endl;
+            for (int i = 0; i < p; i++)
+            {
+                auto start_time = std::chrono::high_resolution_clock::now();
+                VectorXd Sv = shifted_S * Phi.col(i);
+                VectorXd Mv = M * Phi.col(i);
+                VectorXd a = Sv - eigenvalues(i) * Mv;
+                VectorXd M_inv_a = M_solver.solve(a);
+
+                double norm_a = sqrt(a.dot(M_inv_a));
+                VectorXd M_inv_Sv = M_solver.solve(Sv);
+                double norm_b = sqrt(Sv.dot(M_inv_Sv));
+                double residual = norm_a / norm_b;
+                auto end_time = std::chrono::high_resolution_clock::now();
+                auto duration_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
+                cout << "Time SIM residual taken: " << duration_time.count() << " milliseconds" << endl;
+
+                if (residual >= epsilon)
+                {
+                    c = false;
+                    break;
+                }
+            }
+        }
+        end = chrono::high_resolution_clock::now();
+        duration = chrono::duration_cast<chrono::milliseconds>(end - start);
         cout << "Time SIM converged taken: " << duration.count() << " milliseconds" << endl;
         if (c)
         {
@@ -80,12 +106,12 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
 }
 
 void computeDistances(
-    const std::vector<std::set<std::pair<int, double>>> &adjacency,
-    int source,
-    std::vector<double> &distances)
+    const vector<set<pair<int, double>>> &adjacency,
+    const int &source,
+    vector<double> &distances)
 {
     distances[source] = 0;
-    std::priority_queue<std::pair<double, int>, std::vector<std::pair<double, int>>, std::greater<std::pair<double, int>>> pq;
+    std::priority_queue<pair<double, int>, vector<pair<double, int>>, greater<pair<double, int>>> pq;
     pq.push({0.0, source});
     while (!pq.empty())
     {
@@ -108,13 +134,13 @@ void computeDistances(
     }
 }
 
-std::vector<vector<int>> Construct_hierarchy(
-    std::vector<Eigen::Vector3d> vertices,
-    std::vector<Eigen::Vector3i> faces,
-    int T, int p)
+vector<vector<int>> Construct_hierarchy(
+    const std::vector<Vector3d> &vertices,
+    const std::vector<Vector3i> &faces,
+    const int &T, const int &p)
 {
     // Adjacency Matrix
-    std::vector<std::set<std::pair<int, double>>> adjacency;
+    vector<set<pair<int, double>>> adjacency;
     adjacency.resize(vertices.size());
     for (int i = 0; i < faces.size(); i++)
     {
@@ -130,30 +156,32 @@ std::vector<vector<int>> Construct_hierarchy(
     // Init
     vector<vector<int>> hierarchy;
     hierarchy.resize(T);
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(0, vertices.size() - 1);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dis(0, vertices.size() - 1);
     int start_v = dis(gen);
-    std::vector<int> VT = {start_v};
+    vector<int> VT = {start_v};
     int n = max((int)(1.5 * p), 1000);
     // For test
     if (n >= vertices.size())
     {
-        n = (int)(1.5 * p);
+        n = min((int)(1.5 * p), 1000);
+        if (n >= vertices.size())
+            n = vertices.size();
     }
     double mu = pow((double)(vertices.size()) / (double)n, 1.0 / (double)T);
     //   distance vector
-    std::vector<double>
-        distances(adjacency.size(), std::numeric_limits<double>::infinity());
+    vector<double>
+        distances(adjacency.size(), numeric_limits<double>::infinity());
     computeDistances(adjacency, start_v, distances);
     for (int i = T - 1; i > 0; i--)
     {
-        std::vector<int> V_current = VT;
+        vector<int> V_current = VT;
         for (int j = V_current.size(); j < n; j++)
         {
             // find max
             auto max_dist = max_element(distances.begin(), distances.end());
-            int max_index = std::distance(distances.begin(), max_dist);
+            int max_index = distance(distances.begin(), max_dist);
             V_current.push_back(max_index);
             // update distances
             computeDistances(adjacency, max_index, distances);
@@ -169,11 +197,11 @@ std::vector<vector<int>> Construct_hierarchy(
     return hierarchy;
 }
 
-std::vector<SparseMatrix<double>> Build_Prolongation(
-    vector<vector<int>> Hierarchy,
-    std::vector<Eigen::Vector3d> vertices,
-    std::vector<Eigen::Vector3i> faces,
-    double sigma)
+vector<SparseMatrix<double>> Build_Prolongation(
+    const vector<vector<int>> &Hierarchy,
+    const vector<Vector3d> &vertices,
+    const vector<Vector3i> &faces,
+    const double &sigma)
 {
     double A = 0;
 
@@ -182,12 +210,12 @@ std::vector<SparseMatrix<double>> Build_Prolongation(
     // area of the surface
     for (int i = 0; i < faces.size(); i++)
     {
-        Eigen::Vector3d v1 = vertices[faces[i](0)];
-        Eigen::Vector3d v2 = vertices[faces[i](1)];
-        Eigen::Vector3d v3 = vertices[faces[i](2)];
-        Eigen::Vector3d e1 = v2 - v1;
-        Eigen::Vector3d e2 = v3 - v2;
-        Eigen::Vector3d e3 = v1 - v3;
+        Vector3d v1 = vertices[faces[i](0)];
+        Vector3d v2 = vertices[faces[i](1)];
+        Vector3d v3 = vertices[faces[i](2)];
+        Vector3d e1 = v2 - v1;
+        Vector3d e2 = v3 - v2;
+        Vector3d e3 = v1 - v3;
         double area = 0.5 * (e1.cross(-e3)).norm();
         A += area;
     }
@@ -232,13 +260,14 @@ std::vector<SparseMatrix<double>> Build_Prolongation(
     return result;
 }
 
-std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
+pair<VectorXd, MatrixXd> HSIM(
     const SparseMatrix<double> &S,
     const SparseMatrix<double> &M,
-    int p,
-    int T,
-    double epsilon,
-    std::vector<SparseMatrix<double>> U)
+    const int &p,
+    const int &T,
+    const double &epsilon,
+    const vector<SparseMatrix<double>> &U,
+    const string &metric)
 {
     vector<SparseMatrix<double>> ST;
     vector<SparseMatrix<double>> MT;
@@ -247,54 +276,50 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
     ST[0] = S;
     MT[0] = M;
     // Build stiffness matrix and mass matrix for all level
-    auto start = std::chrono::high_resolution_clock::now();
+    auto start = chrono::high_resolution_clock::now();
     for (int i = 1; i <= T - 1; i++)
     {
         ST[i] = U[i - 1].transpose() * ST[i - 1] * U[i - 1];
         MT[i] = U[i - 1].transpose() * MT[i - 1] * U[i - 1];
     }
-    auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto end = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
     cout << "Time1 taken: " << duration.count() << " milliseconds" << endl;
 
-    start = std::chrono::high_resolution_clock::now();
     int q = max((int)(1.5 * p), p + 8);
-    // Compute first q eigenpairs
     MatrixXd DS = MatrixXd(ST[T - 1]);
     MatrixXd DM = MatrixXd(MT[T - 1]);
-    end = std::chrono::high_resolution_clock::now();
-    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    std::cout << "Time4 to dense taken: " << duration.count() << " milliseconds" << std::endl;
-    start = std::chrono::high_resolution_clock::now();
+
+    // Compute first q eigenpairs
+    start = chrono::high_resolution_clock::now();
     DenseSymMatProd<double> opS(DS);
     DenseCholesky<double> opM(DM);
     q = min(q, (int)DS.rows() - 1);
     int nev = min(q * 2, (int)DS.rows());
-    SymGEigsSolver<DenseSymMatProd<double>, DenseCholesky<double>, GEigsMode::Cholesky>
-        eigs(opS, opM, q, nev);
+    SymGEigsSolver<DenseSymMatProd<double>, DenseCholesky<double>, GEigsMode::Cholesky> eigs(opS, opM, q, nev);
     eigs.init();
     int nconv = eigs.compute(SortRule::SmallestAlge);
     VectorXd eigenvalues = eigs.eigenvalues();
     MatrixXd eigenvectors = eigs.eigenvectors();
     eigenvalues.reverseInPlace();
     eigenvectors.rowwise().reverseInPlace();
-    end = std::chrono::high_resolution_clock::now();
-    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    std::cout << "Time2 dense spectra taken: " << duration.count() << " milliseconds" << std::endl;
+    end = chrono::high_resolution_clock::now();
+    duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    cout << "Time2 dense spectra taken: " << duration.count() << " milliseconds" << endl;
 
-    start = std::chrono::high_resolution_clock::now();
+    start = chrono::high_resolution_clock::now();
     for (int i = T - 2; i >= 0; i--)
     {
         cout << i << endl;
         MatrixXd temp_eigenvectors = U[i] * eigenvectors;
         int j = (p + 9) / 10;
         double mu = -eigenvalues(j);
-        pair<VectorXd, MatrixXd> result = SIM(ST[i], MT[i], temp_eigenvectors, p, epsilon, mu);
+        pair<VectorXd, MatrixXd> result = SIM(ST[i], MT[i], temp_eigenvectors, p, epsilon, mu, metric);
         eigenvalues = result.first;
         eigenvectors = result.second;
     }
-    end = std::chrono::high_resolution_clock::now();
-    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    end = chrono::high_resolution_clock::now();
+    duration = chrono::duration_cast<chrono::milliseconds>(end - start);
     cout << "Time3 iteration taken: " << duration.count() << " milliseconds" << endl;
     return make_pair(eigenvalues, eigenvectors);
 }

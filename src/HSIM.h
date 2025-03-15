@@ -1,3 +1,4 @@
+#pragma once
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
 #include <iostream>
@@ -9,38 +10,39 @@
 #include <Spectra/MatOp/DenseSymMatProd.h>
 #include <Spectra/MatOp/DenseCholesky.h>
 #include <Spectra/MatOp/SparseCholesky.h>
-#include <fstream>
 #include <chrono>
 #include <Eigen/CholmodSupport>
-using namespace Eigen;
-using namespace std;
-using namespace Spectra;
 
 std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
-    const SparseMatrix<double> &S,
-    const SparseMatrix<double> &M,
-    MatrixXd &Phi,
-    int p,
-    double epsilon,
-    double mu);
+    const Eigen::SparseMatrix<double> &S,
+    const Eigen::SparseMatrix<double> &M,
+    Eigen::MatrixXd &Phi,
+    const int &p,
+    const double &epsilon,
+    const double &mu,
+    const std::string &metric);
 
 void computeDistances(
     const std::vector<std::set<std::pair<int, double>>> &adjacency,
-    int source,
+    const int &source,
     std::vector<double> &distances);
 
-std::vector<vector<int>> Construct_hierarchy(std::vector<Eigen::Vector3d> vertices, std::vector<Eigen::Vector3i> faces, int T, int p);
+std::vector<std::vector<int>> Construct_hierarchy(
+    const std::vector<Eigen::Vector3d> &vertices,
+    const std::vector<Eigen::Vector3i> &faces,
+    const int &T, const int &p);
 
-std::vector<SparseMatrix<double>> Build_Prolongation(
-    vector<vector<int>> Hierarchy,
-    std::vector<Eigen::Vector3d> vertices,
-    std::vector<Eigen::Vector3i> faces,
-    double sigma);
+std::vector<Eigen::SparseMatrix<double>> Build_Prolongation(
+    const std::vector<std::vector<int>> &Hierarchy,
+    const std::vector<Eigen::Vector3d> &vertices,
+    const std::vector<Eigen::Vector3i> &faces,
+    const double &sigma);
 
 std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
-    const SparseMatrix<double> &S,
-    const SparseMatrix<double> &M,
-    int p,
-    int T,
-    double epsilon,
-    std::vector<SparseMatrix<double>> U);
+    const Eigen::SparseMatrix<double> &S,
+    const Eigen::SparseMatrix<double> &M,
+    const int &p,
+    const int &T,
+    const double &epsilon,
+    const std::vector<Eigen::SparseMatrix<double>> &U,
+    const std::string &metric);
