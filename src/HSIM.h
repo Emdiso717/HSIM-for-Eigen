@@ -13,6 +13,7 @@
 #include <chrono>
 #include <Eigen/CholmodSupport>
 #include <fstream>
+#include <unsupported/Eigen/KroneckerProduct>
 
 std::pair<Eigen::VectorXd, Eigen::MatrixXd> SIM(
     const Eigen::SparseMatrix<double> &S,
@@ -39,8 +40,6 @@ std::vector<Eigen::SparseMatrix<double>> Build_Prolongation(
     const std::vector<Eigen::Vector3i> &faces,
     const double &sigma);
 
-Eigen::SparseMatrix<double> kroneckerProduct(const Eigen::SparseMatrix<double> &A, const Eigen::SparseMatrix<double> &B);
-
 std::vector<Eigen::SparseMatrix<double>> Build_Prolongation_rigid(
     const std::vector<std::vector<int>> &Hierarchy,
     const std::vector<Eigen::Vector3d> &vertices,
@@ -54,4 +53,5 @@ std::pair<Eigen::VectorXd, Eigen::MatrixXd> HSIM(
     const int &T,
     const double &epsilon,
     const std::vector<Eigen::SparseMatrix<double>> &U,
-    const std::string &metric);
+    const std::string &metric,
+    const int &zero);

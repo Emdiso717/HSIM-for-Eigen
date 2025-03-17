@@ -259,91 +259,62 @@ vector<SparseMatrix<double>> Build_Prolongation(
     }
     return result;
 }
-SparseMatrix<double> kroneckerProduct(const SparseMatrix<double> &A, const SparseMatrix<double> &B)
-{
-    int m = A.rows(), n = A.cols();
-    int p = B.rows(), q = B.cols();
 
-    SparseMatrix<double> C(m * p, n * q);
-    std::vector<Triplet<double>> triplets;
-
-    for (int k = 0; k < A.outerSize(); ++k)
-    {
-        for (SparseMatrix<double>::InnerIterator it(A, k); it; ++it)
-        {
-            int i = it.row(), j = it.col();
-            double a_ij = it.value();
-
-            for (int u = 0; u < B.outerSize(); ++u)
-            {
-                for (SparseMatrix<double>::InnerIterator itB(B, u); itB; ++itB)
-                {
-                    int k = itB.row(), l = itB.col();
-                    double b_kl = itB.value();
-
-                    triplets.emplace_back(i * p + k, j * q + l, a_ij * b_kl);
-                }
-            }
-        }
-    }
-
-    C.setFromTriplets(triplets.begin(), triplets.end());
-    return C;
-}
 vector<SparseMatrix<double>> Build_Prolongation_rigid(
     const vector<vector<int>> &Hierarchy,
     const vector<Vector3d> &vertices,
     const vector<Vector3i> &faces,
     const double &sigma)
 {
-    std::ofstream file("../test/U.txt");
     // Build prolongation for Laplace
     vector<SparseMatrix<double>> U;
     U = Build_Prolongation(Hierarchy, vertices, faces, sigma);
-    cout << "finish pro" << endl;
-    Eigen::SparseMatrix<double> I3(3, 3);
-    I3.setIdentity();
-    for (auto &u : U)
+    for (int i = 0; i < U.size(); i++)
     {
-        // Change to Row major
-        SparseMatrix<double, RowMajor> u_row = u;
-        MatrixXd C(4, vertices.size());
-        // Make Matrix C -> CU_i = d
-        /*
-            c = /1,......1/
-                /x_0,...x_n/
-                /y_0,...y_n/
-                /z_0,...z_n/
-        */
-        for (int i = 0; i < vertices.size(); i++)
+        SparseMatrix<double, RowMajor> u = U[i];
+        vector<Triplet<double>> tripletList;
+        for (int j = 0; j < u.rows(); j++)
         {
-            C(0, i) = 1;
-            C(1, i) = vertices[i](0);
-            C(2, i) = vertices[i](1);
-            C(3, i) = vertices[i](2);
-        }
-        cout << "0" << endl;
-        for (int i = 0; i < u_row.rows(); i++)
-        {
-            // Build vector d =(1,x_i,y_i,z_i)T
-            Vector4d d(1, vertices[i](0), vertices[i](1), vertices[i](2));
-            // Build CC^T lambda = CUi-d
-            MatrixXd A = C * C.transpose();
-            MatrixXd B = C * (u_row.row(i)).transpose() - d;
-            LDLT<MatrixXd> ldlt(A);
-            cout << A << endl;
-            Vector4d lambda = ldlt.solve(B);
-            cout << lambda << endl;
-            // change U_i
-            RowVectorXd u_i = u_row.row(i) - lambda.transpose() * C;
-            for (int j = 0; j < u_row.cols(); j++)
+            // Get each row nozero element
+            VectorXd u_row(u.row(j).nonZeros());
+            MatrixXd C(4, u_row.rows());
+            // Build d
+            int indexd = Hierarchy[i][j];
+            Vector4d d(1, vertices[indexd](0), vertices[indexd](1), vertices[indexd](2));
+            int idx = 0;
+            for (SparseMatrix<double, RowMajor>::InnerIterator it(u, j); it; ++it)
             {
-                u.coeffRef(i, j) = u_i(j);
+                u_row(idx) = it.value();
+                // Build C Matrix C*UT = d
+                int index = Hierarchy[i + 1][it.col()];
+                C(0, idx) = 1;
+                C(1, idx) = vertices[index](0);
+                C(2, idx) = vertices[index](1);
+                C(3, idx) = vertices[index](2);
+                idx++;
             }
-            cout << "k" << endl;
+            /*
+                Solve C * CT lambda = C * UT - d
+            */
+            MatrixXd A = C * C.transpose();
+            MatrixXd b = C * u_row - d;
+            LDLT<MatrixXd> ldlt(A);
+            Vector4d lambda = ldlt.solve(b);
+            /*
+                Build new U  = U - lambdaT*C
+            */
+            VectorXd n_u = u_row - C.transpose() * lambda;
+            idx = 0;
+            for (SparseMatrix<double, RowMajor>::InnerIterator it(u, j); it; ++it)
+            {
+                tripletList.push_back(Triplet<double>(j * 3, it.col() * 3, n_u(idx)));
+                tripletList.push_back(Triplet<double>(j * 3 + 1, it.col() * 3 + 1, n_u(idx)));
+                tripletList.push_back(Triplet<double>(j * 3 + 2, it.col() * 3 + 2, n_u(idx)));
+                idx++;
+            }
         }
-        cout << "1" << endl;
-        u = kroneckerProduct(u, I3);
+        SparseMatrix<double> new_u(U[i].rows() * 3, U[i].cols() * 3);
+        new_u.setFromTriplets(tripletList.begin(), tripletList.end());
     }
     return U;
 }
@@ -355,7 +326,8 @@ pair<VectorXd, MatrixXd> HSIM(
     const int &T,
     const double &epsilon,
     const vector<SparseMatrix<double>> &U,
-    const string &metric)
+    const string &metric,
+    const int &zero)
 {
     vector<SparseMatrix<double>> ST;
     vector<SparseMatrix<double>> MT;
@@ -399,9 +371,9 @@ pair<VectorXd, MatrixXd> HSIM(
     for (int i = T - 2; i >= 0; i--)
     {
         cout << i << endl;
+        cout << eigenvalues << endl;
         MatrixXd temp_eigenvectors = U[i] * eigenvectors;
-        int j = (p + 9) / 10;
-        double mu = -eigenvalues(j);
+        double mu = -eigenvalues(zero);
         pair<VectorXd, MatrixXd> result = SIM(ST[i], MT[i], temp_eigenvectors, p, epsilon, mu, metric);
         eigenvalues = result.first;
         eigenvectors = result.second;

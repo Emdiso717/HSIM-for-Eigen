@@ -74,7 +74,7 @@ namespace testing
         std::cout << "Finished Prolongation" << std::endl;
 
         auto start = std::chrono::high_resolution_clock::now();
-        std::pair<Eigen::VectorXd, Eigen::MatrixXd> result = HSIM(stiffness, mass, p, layer, epsilon, U, "I");
+        std::pair<Eigen::VectorXd, Eigen::MatrixXd> result = HSIM(stiffness, mass, p, layer, epsilon, U, "I", 1);
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Time HSIM taken: " << duration.count() << " milliseconds" << std::endl;
