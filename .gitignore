@@ -1,8 +1,10 @@
 # Build directories
 build/
+build
 out/
 cmake-build-*/
 build-release/
+build-debug/
 
 # IDE specific files
 .vs/

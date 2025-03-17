@@ -13,8 +13,10 @@ int main(int argc, char **argv)
     CLI::App app;
     std::map<int, std::pair<int, std::string>> map;
     int p = 10;
+    SparseMatrix<double, Eigen::RowMajor> S_row;
     SparseMatrix<double> S;
     string S_path, M_path;
+    SparseMatrix<double, Eigen::RowMajor> M_row;
     SparseMatrix<double> M;
     vector<SparseMatrix<double>> U;
     vector<string> U_paths;
@@ -27,8 +29,10 @@ int main(int argc, char **argv)
     app.add_option("--metric", metric, "Form of metric (I or Minv)")->check(CLI::IsMember{std::vector<std::string>{"I", "Minv"}});
     app.add_option("--epsilon", epsilon, "Convergence factor");
     CLI11_PARSE(app, argc, argv);
-    zcy::io::read_spm(M_path.c_str(), M);
-    zcy::io::read_spm(S_path.c_str(), S);
+    zcy::io::read_spm(M_path.c_str(), M_row);
+    zcy::io::read_spm(S_path.c_str(), S_row);
+    M = M_row;
+    S = S_row;
     int layer = 1;
     for (auto &U_path : U_paths)
     {

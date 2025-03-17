@@ -49,7 +49,7 @@ namespace zcy
             idx.resize(mat_size[2]);
             if (Major != mat_size[3])
             {
-                std::cerr << "major not match." << std::endl;
+                std::cerr << "major not match. A Major: " << Major << ", file Major: " << mat_size[3] << std::endl;
                 return __LINE__;
             }
             if (Major == Eigen::ColMajor)
