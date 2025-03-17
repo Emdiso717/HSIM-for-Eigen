@@ -80,6 +80,7 @@ namespace testing
         std::cout << "Time HSIM taken: " << duration.count() << " milliseconds" << std::endl;
         std::cout << "\n特征值:" << std::endl;
         std::cout << result.first.transpose() << std::endl;
+        std::cout << result.second << std::endl;
 
         // auto start = std::chrono::high_resolution_clock::now();
         // MatrixXd Phi = MatrixXd::Random(stiffness.cols(), (int)(p + 8));
@@ -90,26 +91,27 @@ namespace testing
         // cout << "\n特征值：" << endl;
         // cout << result.first.transpose() << endl;
 
-        // {
-        //     stiffness.makeCompressed();
-        //     mass.makeCompressed();
-        //     MatrixXd M = MatrixXd(mass);
-        //     MatrixXd S = MatrixXd(stiffness);
-        //     auto start = std::chrono::high_resolution_clock::now();
-        //     DenseSymMatProd<double> opS(S);
-        //     DenseCholesky<double> opM(M);
-        //     SymGEigsSolver<DenseSymMatProd<double>, DenseCholesky<double>, GEigsMode::Cholesky> eigs(opS, opM, p, p * 2);
-        //     eigs.init();
-        //     int nconv = eigs.compute(SortRule::SmallestAlge);
-        //     VectorXd eigenvalues = eigs.eigenvalues();
-        //     MatrixXd eigenvectors = eigs.eigenvectors();
-        //     eigenvalues.reverseInPlace();
-        //     eigenvectors.rowwise().reverseInPlace();
-        //     auto end = std::chrono::high_resolution_clock::now();
-        //     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-        //     std::cout << "Time sparse taken: " << duration.count() << " milliseconds" << std::endl;
-        //     cout << eigenvalues.transpose() << endl;
-        // }
+        {
+            using namespace Eigen;
+            using namespace std;
+            using namespace Spectra;
+            stiffness.makeCompressed();
+            mass.makeCompressed();
+            MatrixXd M = MatrixXd(mass);
+            MatrixXd S = MatrixXd(stiffness);
+            Spectra::DenseSymMatProd<double> opS(S);
+            Spectra::DenseCholesky<double> opM(M);
+            Spectra::SymGEigsSolver<Spectra::DenseSymMatProd<double>, Spectra::DenseCholesky<double>, Spectra::GEigsMode::Cholesky> eigs(opS, opM, p, p * 2);
+            eigs.init();
+            int nconv = eigs.compute(Spectra::SortRule::SmallestAlge);
+            VectorXd eigenvalues = eigs.eigenvalues();
+            MatrixXd eigenvectors = eigs.eigenvectors();
+            eigenvalues.reverseInPlace();
+            eigenvectors.rowwise().reverseInPlace();
+            std::cout << "Time sparse taken: " << duration.count() << " milliseconds" << std::endl;
+            std::cout << eigenvalues.transpose() << std::endl;
+            std::cout << eigenvectors << std::endl;
+        }
     }
 
     void Get_Matrix_MSU()

@@ -206,7 +206,7 @@ vector<SparseMatrix<double>> Build_Prolongation(
     double A = 0;
 
     vector<SparseMatrix<double>> result;
-    result.resize(Hierarchy.size());
+    result.resize(Hierarchy.size() - 1);
     // area of the surface
     for (int i = 0; i < faces.size(); i++)
     {
@@ -258,6 +258,94 @@ vector<SparseMatrix<double>> Build_Prolongation(
         result[i - 1] = U;
     }
     return result;
+}
+SparseMatrix<double> kroneckerProduct(const SparseMatrix<double> &A, const SparseMatrix<double> &B)
+{
+    int m = A.rows(), n = A.cols();
+    int p = B.rows(), q = B.cols();
+
+    SparseMatrix<double> C(m * p, n * q);
+    std::vector<Triplet<double>> triplets;
+
+    for (int k = 0; k < A.outerSize(); ++k)
+    {
+        for (SparseMatrix<double>::InnerIterator it(A, k); it; ++it)
+        {
+            int i = it.row(), j = it.col();
+            double a_ij = it.value();
+
+            for (int u = 0; u < B.outerSize(); ++u)
+            {
+                for (SparseMatrix<double>::InnerIterator itB(B, u); itB; ++itB)
+                {
+                    int k = itB.row(), l = itB.col();
+                    double b_kl = itB.value();
+
+                    triplets.emplace_back(i * p + k, j * q + l, a_ij * b_kl);
+                }
+            }
+        }
+    }
+
+    C.setFromTriplets(triplets.begin(), triplets.end());
+    return C;
+}
+vector<SparseMatrix<double>> Build_Prolongation_rigid(
+    const vector<vector<int>> &Hierarchy,
+    const vector<Vector3d> &vertices,
+    const vector<Vector3i> &faces,
+    const double &sigma)
+{
+    std::ofstream file("../test/U.txt");
+    // Build prolongation for Laplace
+    vector<SparseMatrix<double>> U;
+    U = Build_Prolongation(Hierarchy, vertices, faces, sigma);
+    cout << "finish pro" << endl;
+    Eigen::SparseMatrix<double> I3(3, 3);
+    I3.setIdentity();
+    for (auto &u : U)
+    {
+        // Change to Row major
+        SparseMatrix<double, RowMajor> u_row = u;
+        MatrixXd C(4, vertices.size());
+        // Make Matrix C -> CU_i = d
+        /*
+            c = /1,......1/
+                /x_0,...x_n/
+                /y_0,...y_n/
+                /z_0,...z_n/
+        */
+        for (int i = 0; i < vertices.size(); i++)
+        {
+            C(0, i) = 1;
+            C(1, i) = vertices[i](0);
+            C(2, i) = vertices[i](1);
+            C(3, i) = vertices[i](2);
+        }
+        cout << "0" << endl;
+        for (int i = 0; i < u_row.rows(); i++)
+        {
+            // Build vector d =(1,x_i,y_i,z_i)T
+            Vector4d d(1, vertices[i](0), vertices[i](1), vertices[i](2));
+            // Build CC^T lambda = CUi-d
+            MatrixXd A = C * C.transpose();
+            MatrixXd B = C * (u_row.row(i)).transpose() - d;
+            LDLT<MatrixXd> ldlt(A);
+            cout << A << endl;
+            Vector4d lambda = ldlt.solve(B);
+            cout << lambda << endl;
+            // change U_i
+            RowVectorXd u_i = u_row.row(i) - lambda.transpose() * C;
+            for (int j = 0; j < u_row.cols(); j++)
+            {
+                u.coeffRef(i, j) = u_i(j);
+            }
+            cout << "k" << endl;
+        }
+        cout << "1" << endl;
+        u = kroneckerProduct(u, I3);
+    }
+    return U;
 }
 
 pair<VectorXd, MatrixXd> HSIM(

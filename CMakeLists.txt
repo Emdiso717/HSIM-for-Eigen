@@ -25,8 +25,16 @@ foreach(INCLUDE IN LISTS INCLUDES)
     message("Load ${INCLUDE} done.")
 endforeach()
 
+
+find_package(VTK REQUIRED)
+include(${VTK_USE_FILE})
 include_directories(src)
 add_subdirectory(src)
 add_executable(HSIM main.cpp)
+add_executable(gen_U gen_U.cpp)
+add_executable(testing testing.cpp)
 target_link_libraries(HSIM eigen_solver)
+target_link_libraries(gen_U eigen_solver)
+target_link_libraries(testing eigen_solver)
+target_link_libraries(gen_U ${VTK_LIBRARIES})
 

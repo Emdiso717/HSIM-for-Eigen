@@ -48,9 +48,3 @@ int main(int argc, char **argv)
     cout << "Eigen values:" << endl;
     cout << result.first.transpose() << endl;
 }
-
-// int main()
-// {
-//     testing::Eigen_solver();
-//     testing::Get_Matrix_MSU();
-// }
